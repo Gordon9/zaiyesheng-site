@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="再野生，为废旧轮胎提供便捷、规范的回收服务。"
+    />
+    <title>再野生｜让每一条轮胎重获新生</title>
+    <style>
+      :root {
+        --coral: #ff385c;
+        --ink: #222222;
+        --muted: #717171;
+        --line: #dddddd;
+        --soft: #f7f7f7;
+        --mint: #e9f8f0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Microsoft YaHei", sans-serif;
+      }
+      .wrap {
+        width: min(1120px, calc(100% - 48px));
+        margin: auto;
+      }
+      header {
+        border-bottom: 1px solid #ebebeb;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      nav {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 21px;
+        font-weight: 800;
+        color: var(--coral);
+        text-decoration: none;
+        letter-spacing: -0.04em;
+      }
+      .mark {
+        width: 31px;
+        height: 31px;
+        border: 4px solid var(--coral);
+        border-radius: 50%;
+        position: relative;
+      }
+      .mark:after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--coral);
+        top: 6px;
+        left: 6px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+      .nav-links a {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .nav-button,
+      .button {
+        display: inline-block;
+        background: var(--coral);
+        color: #fff;
+        text-decoration: none;
+        border: 0;
+        border-radius: 9px;
+        padding: 14px 20px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .nav-button {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+      .hero {
+        padding: 70px 0 35px;
+        background: linear-gradient(180deg, #fff 0%, #fff8f8 100%);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 99px;
+        padding: 8px 12px;
+        box-shadow: 0 3px 12px #0000000c;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        background: #42b883;
+        border-radius: 50%;
+      }
+      h1 {
+        font-size: clamp(43px, 5.5vw, 70px);
+        letter-spacing: -0.065em;
+        line-height: 1.05;
+        margin: 19px 0 22px;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--coral);
+      }
+      .hero p {
+        font-size: 17px;
+        line-height: 1.65;
+        color: var(--muted);
+        max-width: 500px;
+        margin: 0 0 28px;
+      }
+      .booking {
+        margin-top: 40px;
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 6px 20px #00000016;
+        border-radius: 16px;
+        padding: 9px;
+        display: flex;
+        align-items: center;
+        max-width: 540px;
+      }
+      .booking-item {
+        padding: 5px 17px;
+        flex: 1;
+        border-right: 1px solid var(--line);
+      }
+      .booking-item:last-of-type {
+        border: 0;
+      }
+      .booking-item b,
+      .booking-item span {
+        display: block;
+      }
+      .booking-item b {
+        font-size: 12px;
+      }
+      .booking-item span {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .booking button {
+        border: 0;
+        border-radius: 11px;
+        width: 46px;
+        height: 46px;
+        background: var(--coral);
+        color: #fff;
+        font-size: 20px;
+      }
+      .visual {
+        height: 440px;
+        border-radius: 25px;
+        background: #ffdadf;
+        position: relative;
+        overflow: hidden;
+      }
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: #ff7b90;
+        width: 260px;
+        height: 260px;
+        right: -55px;
+        top: -64px;
+      }
+      .road {
+        position: absolute;
+        bottom: -50px;
+        left: -8%;
+        height: 185px;
+        width: 120%;
+        border-radius: 50% 50% 0 0;
+        background: #222;
+      }
+      .tire {
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border: 43px solid #29302d;
+        border-radius: 50%;
+        bottom: 48px;
+        right: 91px;
+        box-shadow: inset 0 0 0 11px #0c100e, 0 18px 24px #0004;
+        transform: rotate(-16deg);
+      }
+      .tire:before {
+        content: "";
+        position: absolute;
+        inset: 41px;
+        border: 20px dashed #6d7872;
+        border-radius: 50%;
+      }
+      .tire:after {
+        content: "REUSE";
+        position: absolute;
+        inset: 75px;
+        border-radius: 50%;
+        background: #fff;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        color: var(--coral);
+      }
+      .leaf {
+        position: absolute;
+        width: 100px;
+        height: 48px;
+        border-radius: 100px 0;
+        background: #27a36a;
+        left: 55px;
+        top: 100px;
+        transform: rotate(35deg);
+      }
+      .leaf:after {
+        content: "";
+        position: absolute;
+        top: 26px;
+        width: 110px;
+        border-top: 3px solid #d5fae3;
+        transform: rotate(-26deg);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 38px 0 68px;
+        gap: 24px;
+      }
+      .stat {
+        border-left: 1px solid var(--line);
+        padding-left: 20px;
+      }
+      .stat:first-child {
+        border: 0;
+        padding-left: 0;
+      }
+      .stat b {
+        font-size: 26px;
+        letter-spacing: -0.04em;
+      }
+      .stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      section {
+        padding: 72px 0;
+      }
+      .label {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: var(--coral);
+      }
+      h2 {
+        font-size: clamp(31px, 4vw, 47px);
+        letter-spacing: -0.055em;
+        line-height: 1.1;
+        margin: 14px 0 36px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        padding: 24px;
+        min-height: 205px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px #00000012;
+      }
+      .icon {
+        font-size: 25px;
+      }
+      .card h3 {
+        font-size: 19px;
+        margin: 18px 0 8px;
+      }
+      .card p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--muted);
+        margin: 0;
+      }
+      .process {
+        background: var(--soft);
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .step {
+        background: #fff;
+        border-radius: 16px;
+        padding: 20px;
+        min-height: 190px;
+      }
+      .num {
+        color: var(--coral);
+        font-weight: 800;
+        font-size: 14px;
+      }
+      .step h3 {
+        margin: 24px 0 8px;
+        font-size: 18px;
+      }
+      .step p {
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--muted);
+        margin: 0;
+      }
+      .cta {
+        padding: 78px 0;
+      }
+      .cta-box {
+        border-radius: 24px;
+        background: var(--mint);
+        padding: 50px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 30px;
+      }
+      .cta h2 {
+        margin: 10px 0 0;
+        max-width: 600px;
+      }
+      .cta .button {
+        white-space: nowrap;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+        color: var(--muted);
+        padding: 27px 0;
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      footer p {
+        margin: 0;
+      }
+      @media (max-width: 760px) {
+        .wrap {
+          width: min(100% - 32px, 1120px);
+        }
+        nav {
+          height: 67px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero {
+          padding: 38px 0 15px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
+        .visual {
+          height: 320px;
+          order: -1;
+        }
+        .circle {
+          width: 170px;
+          height: 170px;
+        }
+        .tire {
+          width: 200px;
+          height: 200px;
+          border-width: 34px;
+          right: 50px;
+          bottom: 27px;
+        }
+        .tire:before {
+          inset: 31px;
+          border-width: 15px;
+        }
+        .tire:after {
+          inset: 58px;
+          font-size: 11px;
+        }
+        .leaf {
+          transform: scale(0.75) rotate(35deg);
+          left: 25px;
+          top: 70px;
+        }
+        .road {
+          height: 125px;
+        }
+        .booking {
+          margin-top: 27px;
+        }
+        .booking-item {
+          padding: 5px 9px;
+        }
+        .booking-item:nth-child(2) {
+          display: none;
+        }
+        .stats,
+        .cards {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          gap: 18px;
+          padding: 32px 0 46px;
+        }
+        .stat,
+        .stat:first-child {
+          border-left: 1px solid var(--line);
+          padding-left: 16px;
+        }
+        .steps {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .step {
+          min-height: 160px;
+        }
+        .cta-box {
+          display: block;
+          padding: 32px 25px;
+        }
+        .cta .button {
+          margin-top: 25px;
+        }
+        section {
+          padding: 55px 0;
+        }
+        footer .wrap {
+          display: block;
+        }
+        footer p + p {
+          margin-top: 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <nav>
+          <a class="brand" href="#top"><i class="mark"></i>再野生</a>
+          <div class="nav-links">
+            <a href="#services">服务内容</a><a href="#process">回收流程</a
+            ><a href="#contact">联系我们</a>
+          </div>
+          <a class="nav-button" href="#contact">预约回收</a>
+        </nav>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <div class="pill"><i class="dot"></i>本地 24 小时内响应</div>
+            <h1>让每一条轮胎<br /><em>去往更好的地方。</em></h1>
+            <p>
+              简单预约、专业回收、全程可追溯。让闲置轮胎重新成为有价值的资源。
+            </p>
+            <div class="booking">
+              <div class="booking-item">
+                <b>回收地点</b><span>填写您的所在区域</span>
+              </div>
+              <div class="booking-item">
+                <b>轮胎数量</b><span>例如：10 条</span>
+              </div>
+              <button aria-label="预约回收">⌕</button>
+            </div>
+          </div>
+          <div class="visual" aria-label="轮胎循环利用插画">
+            <div class="circle"></div>
+            <div class="leaf"></div>
+            <div class="road"></div>
+            <div class="tire"></div>
+          </div>
+        </div>
+      </section>
+      <div class="wrap stats">
+        <div class="stat"><b>12,000+</b><span>已回收轮胎（条）</span></div>
+        <div class="stat"><b>98%</b><span>资源化利用率</span></div>
+        <div class="stat"><b>24h</b><span>本地响应服务</span></div>
+      </div>
+      <section id="services">
+        <div class="wrap">
+          <div class="label">OUR SERVICES</div>
+          <h2>一件小事，也有完整的循环旅程。</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="icon">🚚</div>
+              <h3>上门回收</h3>
+              <p>覆盖社区、汽修门店与车队，按您预约的时间完成规范装运。</p>
+            </article>
+            <article class="card">
+              <div class="icon">♻️</div>
+              <h3>资源再生</h3>
+              <p>经过分拣、破碎与精细处理，转化为再生胶、橡胶颗粒等材料。</p>
+            </article>
+            <article class="card">
+              <div class="icon">✓</div>
+              <h3>合规可追溯</h3>
+              <p>提供回收记录与去向证明，让每一次环保行动都看得见。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="process" id="process">
+        <div class="wrap">
+          <div class="label">HOW IT WORKS</div>
+          <h2>预约回收，只需要四步。</h2>
+          <div class="steps">
+            <article class="step">
+              <div class="num">01</div>
+              <h3>提交需求</h3>
+              <p>告诉我们数量、位置与时间。</p>
+            </article>
+            <article class="step">
+              <div class="num">02</div>
+              <h3>确认方案</h3>
+              <p>专人联系，安排回收与装运。</p>
+            </article>
+            <article class="step">
+              <div class="num">03</div>
+              <h3>规范处理</h3>
+              <p>轮胎进入合规处置流程。</p>
+            </article>
+            <article class="step">
+              <div class="num">04</div>
+              <h3>循环再用</h3>
+              <p>再生成服务城市的新材料。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="cta" id="contact">
+        <div class="wrap">
+          <div class="cta-box">
+            <div>
+              <div class="label">START TODAY</div>
+              <h2>从一条轮胎开始，让改变发生。</h2>
+            </div>
+            <a class="button" href="tel:400-888-2026">拨打 400-888-2026</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <p>© 2026 再野生</p>
+        <p>服务时间：周一至周日 08:00–20:00</p>
+      </div>
+    </footer>
+  </body>
+</html>
