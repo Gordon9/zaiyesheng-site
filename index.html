@@ -485,6 +485,35 @@
           margin-top: 9px;
         }
       }
+      #wechat-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      #wechat-popup img {
+        width: 220px;
+      }
+
+      .wechat-box {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+
+.wechat-qrcode {
+  width:120px;
+  height:120px;
+}
+
+
     </style>
   </head>
   <body>
@@ -493,8 +522,9 @@
         <nav>
           <a class="brand" href="#top"><i class="mark"></i>再野生</a>
           <div class="nav-links">
-            <a href="#services">服务内容</a><a href="#process">回收流程</a
-            ><a href="#contact">联系我们</a>
+            <a href="#services">服务内容</a>
+            <!-- <a href="#process">回收流程</a> -->
+            <a href="#contact">联系我们</a>
           </div>
           <a class="nav-button" href="#contact">预约回收</a>
         </nav>
@@ -506,10 +536,12 @@
           <div>
             <div class="pill"><i class="dot"></i>本地 24 小时内响应</div>
             <h1>让每一条轮胎<br /><em>去往更好的地方。</em></h1>
-            <p>
-              简单预约、专业回收、全程可追溯。让闲置轮胎重新成为有价值的资源。
-            </p>
-            <div class="booking">
+            <h2>
+              广州轮胎上门回收
+              <br />
+              回收各种废旧轮胎
+            </h2>
+            <!-- <div class="booking">
               <div class="booking-item">
                 <b>回收地点</b><span>填写您的所在区域</span>
               </div>
@@ -517,7 +549,7 @@
                 <b>轮胎数量</b><span>例如：10 条</span>
               </div>
               <button aria-label="预约回收">⌕</button>
-            </div>
+            </div> -->
           </div>
           <div class="visual" aria-label="轮胎循环利用插画">
             <div class="circle"></div>
@@ -527,11 +559,13 @@
           </div>
         </div>
       </section>
-      <div class="wrap stats">
+      <!-- <div class="wrap stats">
         <div class="stat"><b>12,000+</b><span>已回收轮胎（条）</span></div>
         <div class="stat"><b>98%</b><span>资源化利用率</span></div>
         <div class="stat"><b>24h</b><span>本地响应服务</span></div>
-      </div>
+      </div> -->
+
+      
       <section id="services">
         <div class="wrap">
           <div class="label">OUR SERVICES</div>
@@ -555,7 +589,7 @@
           </div>
         </div>
       </section>
-      <section class="process" id="process">
+      <!-- <section class="process" id="process">
         <div class="wrap">
           <div class="label">HOW IT WORKS</div>
           <h2>预约回收，只需要四步。</h2>
@@ -582,7 +616,7 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="cta" id="contact">
         <div class="wrap">
           <div class="cta-box">
@@ -590,16 +624,24 @@
               <div class="label">START TODAY</div>
               <h2>从一条轮胎开始，让改变发生。</h2>
             </div>
-            <a class="button" href="tel:400-888-2026">拨打 400-888-2026</a>
-          </div>
+            <!-- <a class="button" href="tel:400-888-2026">拨打 400-888-2026</a> -->
+           <div class="wechat-box">
+  <img class="wechat-qrcode" src="images/wechat.JPG" alt="微信二维码">
+  <span>扫码微信预约回收</span>
+</div>
         </div>
       </section>
     </main>
     <footer>
       <div class="wrap">
         <p>© 2026 再野生</p>
-        <p>服务时间：周一至周日 08:00–20:00</p>
       </div>
     </footer>
   </body>
+
+  <script>
+    function showWechat() {
+      document.getElementById("wechat-popup").style.display = "block";
+    }
+  </script>
 </html>
