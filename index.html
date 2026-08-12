@@ -61,7 +61,7 @@
       .mark {
         width: 31px;
         height: 31px;
-        border: 4px solid var(--coral);
+        /* border: 4px solid var(--coral); */
         border-radius: 50%;
         position: relative;
       }
@@ -316,6 +316,56 @@
         transform: translateY(-4px);
         box-shadow: 0 8px 22px #00000012;
       }
+
+      /* 轮胎类型图片展示 */
+.tire-types {
+  background: #fff;
+}
+
+.tire-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tire-card {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.tire-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #00000012;
+}
+
+.tire-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tire-card h3 {
+  font-size: 19px;
+  margin: 18px 20px 8px;
+}
+
+.tire-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 20px 20px;
+}
+
+
+@media (max-width:760px) {
+  .tire-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
       .icon {
         font-size: 25px;
       }
@@ -513,6 +563,14 @@
   height:120px;
 }
 
+#services {
+  padding-bottom: 30px;
+}
+
+.tire-types {
+  padding-top: 30px;
+}
+
 
     </style>
   </head>
@@ -520,10 +578,12 @@
     <header>
       <div class="wrap">
         <nav>
-          <a class="brand" href="#top"><i class="mark"></i>再野生</a>
+          <!-- <a class="brand" href="#top"><i class="mark"></i>广州轮胎回收</a> -->
+          <a class="brand" href="#top"><img class="mark" src="images/favicon.svg" alt="">广州轮胎回收</a>
           <div class="nav-links">
             <a href="#services">服务内容</a>
             <!-- <a href="#process">回收流程</a> -->
+             <a href="#type">轮胎类型</a>
             <a href="#contact">联系我们</a>
           </div>
           <a class="nav-button" href="#contact">预约回收</a>
@@ -617,6 +677,58 @@
           </div>
         </div>
       </section> -->
+
+      <section id="type">
+<section class="tire-types" id="type">
+  <div class="wrap">
+
+    <div class="label">TIRE TYPES</div>
+    <h2>覆盖多种废旧轮胎回收。</h2>
+
+    <div class="tire-grid">
+
+      <article class="tire-card">
+        <img src="images/truck-tire.png" alt="货车轮胎">
+        <h3>货车轮胎</h3>
+        <p>
+          回收各种货车、卡车、大型运输车辆废旧轮胎。
+        </p>
+      </article>
+
+
+      <article class="tire-card">
+        <img src="images/car-tire.png" alt="轿车轮胎">
+        <h3>轿车轮胎</h3>
+        <p>
+          回收家用轿车、SUV以及新能源车辆轮胎。
+        </p>
+      </article>
+
+
+      <article class="tire-card">
+        <img src="images/construction-tire.png" alt="工程车轮胎">
+        <h3>工程车轮胎</h3>
+        <p>
+          回收装载机、挖掘机等大型工程车辆轮胎。
+        </p>
+      </article>
+
+
+      <article class="tire-card">
+        <img src="images/aircraft-tire.png" alt="飞机轮胎">
+        <h3>飞机轮胎</h3>
+        <p>
+          回收特殊规格航空轮胎及大型工业轮胎。
+        </p>
+      </article>
+
+
+    </div>
+
+  </div>
+</section>
+      </section>
+
       <section class="cta" id="contact">
         <div class="wrap">
           <div class="cta-box">
@@ -634,7 +746,7 @@
     </main>
     <footer>
       <div class="wrap">
-        <p>© 2026 再野生</p>
+        <p>© 2026 广州轮胎回收</p>
       </div>
     </footer>
   </body>
