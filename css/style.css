@@ -439,3 +439,186 @@ footer p {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* =====================
+   限时活动 · 七夕倒计时
+===================== */
+
+.event-section {
+  padding: 35px 0 55px;
+}
+
+.event-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 24px;
+  padding: 45px;
+  background: var(--mint);
+}
+
+.event-text h2 {
+  margin: 12px 0 10px;
+}
+
+.event-text p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.countdown {
+  display: flex;
+  gap: 14px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 90px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.time-box b {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--coral);
+}
+
+.time-box span {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* 活动结束后展示的状态 */
+.event-finished {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 260px;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff5f7, #ffe3e8);
+  text-align: center;
+  animation: eventReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.event-box.finished {
+  justify-content: center;
+  min-height: 360px;
+  background: linear-gradient(135deg, #fff5f7, #ffe3e8);
+}
+
+.event-content {
+  position: relative;
+  z-index: 2;
+}
+
+.event-date {
+  margin-bottom: 20px;
+  color: #999;
+  font-size: 14px;
+}
+
+.event-finished h3 {
+  margin: 0;
+  font-size: 48px;
+  letter-spacing: -0.06em;
+  color: var(--coral);
+}
+
+.event-finished p {
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+.event-symbol {
+  font-size: 22px;
+  color: var(--coral);
+}
+
+@keyframes eventReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* 漂浮爱心背景 */
+.floating-hearts span {
+  position: absolute;
+  bottom: -40px;
+  color: #ff385c;
+  opacity: 0.25;
+  font-size: 30px;
+  animation: floatHeart 8s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.floating-hearts span:nth-child(2) {
+  left: 30%;
+  font-size: 45px;
+  animation-delay: 2s;
+}
+.floating-hearts span:nth-child(3) {
+  left: 55%;
+  animation-delay: 4s;
+}
+.floating-hearts span:nth-child(4) {
+  left: 75%;
+  font-size: 50px;
+  animation-delay: 1s;
+}
+.floating-hearts span:nth-child(5) {
+  left: 90%;
+  animation-delay: 3s;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-330px) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+/* 手机适配 */
+@media (max-width: 760px) {
+  .event-box {
+    display: block;
+    padding: 30px 20px;
+  }
+  .countdown {
+    margin-top: 25px;
+    gap: 8px;
+  }
+  .time-box {
+    width: 65px;
+    height: 75px;
+  }
+  .time-box b {
+    font-size: 25px;
+  }
+}
