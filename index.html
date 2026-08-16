@@ -1,22 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="广州废旧轮胎上门回收服务，覆盖轿车、货车、工程车及航空轮胎，提供规范装运与资源再生服务。" />
+    <meta
+      name="description"
+      content="广州废旧轮胎上门回收服务，覆盖轿车、货车、工程车及航空轮胎，提供规范装运与资源再生服务。"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ff385c" />
     <link rel="canonical" href="https://gordon9.github.io/zaiyesheng-site/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:site_name" content="再野生·广州轮胎回收" />
-    <meta property="og:url" content="https://gordon9.github.io/zaiyesheng-site/" />
+    <meta
+      property="og:url"
+      content="https://gordon9.github.io/zaiyesheng-site/"
+    />
     <meta property="og:title" content="广州废旧轮胎上门回收 | 再野生" />
-    <meta property="og:description" content="覆盖轿车、货车、工程车及航空轮胎的广州上门回收服务。" />
-    <meta property="og:image" content="https://gordon9.github.io/zaiyesheng-site/images/truck-tire.png" />
+    <meta
+      property="og:description"
+      content="覆盖轿车、货车、工程车及航空轮胎的广州上门回收服务。"
+    />
+    <meta
+      property="og:image"
+      content="https://gordon9.github.io/zaiyesheng-site/images/truck-tire.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <title>广州废旧轮胎上门回收｜汽车、货车、工程车轮胎回收 | 再野生</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="images/tire_icon.svg" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -36,96 +48,462 @@
       }
     </script>
     <style>
-      :root { --coral:#ff385c; --ink:#222; --muted:#717171; --line:#ddd; --mint:#e9f8f0; }
-      * { box-sizing:border-box; }
-      html { scroll-behavior:smooth; }
-      body { margin:0; color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
-      img { display:block; max-width:100%; }
-      a:focus-visible { outline:3px solid #222; outline-offset:3px; }
-      .wrap { width:min(1120px, calc(100% - 48px)); margin:auto; }
-      header { position:sticky; top:0; z-index:10; border-bottom:1px solid #ebebeb; background:#fff; }
-      nav { display:flex; align-items:center; justify-content:space-between; gap:25px; height:80px; }
-      .brand { display:flex; align-items:center; gap:9px; color:var(--coral); font-size:21px; font-weight:800; letter-spacing:-.04em; text-decoration:none; white-space:nowrap; }
-      .mark { width:31px; height:31px; border-radius:50%; }
-      .nav-links { display:flex; gap:25px; }
-      .nav-links a { color:var(--ink); font-size:14px; font-weight:600; text-decoration:none; }
-      .nav-button { display:inline-block; border:0; border-radius:9px; padding:14px 20px; background:var(--coral); color:#fff; cursor:pointer; font-size:15px; font-weight:700; text-decoration:none; }
-      .nav-button { padding:10px 16px; font-size:14px; }
-      section { padding:72px 0; scroll-margin-top:96px; }
-      .hero { padding:70px 0 35px; background:linear-gradient(180deg, #fff 0%, #fff8f8 100%); }
-      .hero-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:60px; }
-      .pill { display:inline-flex; align-items:center; gap:7px; border:1px solid #eee; border-radius:99px; padding:8px 12px; background:#fff; box-shadow:0 3px 12px #0000000c; font-size:13px; font-weight:700; }
-      .dot { width:8px; height:8px; border-radius:50%; background:#42b883; }
-      h1 { margin:19px 0 22px; font-size:clamp(43px, 5.5vw, 70px); letter-spacing:-.065em; line-height:1.05; }
-      .hero-tagline { margin:0; color:var(--muted); font-size:20px; font-weight:700; line-height:1.5; }
-      .hero-tagline em { color:var(--coral); font-style:normal; }
-      .visual { position:relative; height:440px; overflow:hidden; border-radius:25px; background:#ffdadf; }
-      .circle { position:absolute; top:-64px; right:-55px; width:260px; height:260px; border-radius:50%; background:#ff7b90; }
-      .road { position:absolute; bottom:-50px; left:-8%; width:120%; height:185px; border-radius:50% 50% 0 0; background:#222; }
-      .tire { position:absolute; right:91px; bottom:48px; width:260px; height:260px; transform:rotate(-16deg); border:43px solid #29302d; border-radius:50%; box-shadow:inset 0 0 0 11px #0c100e, 0 18px 24px #0004; }
-      .tire::before { position:absolute; inset:41px; content:""; border:20px dashed #6d7872; border-radius:50%; }
-      .tire::after { display:grid; position:absolute; inset:75px; place-items:center; content:"REUSE"; border-radius:50%; background:#fff; color:var(--coral); font-size:14px; font-weight:800; letter-spacing:.1em; }
-      .leaf { position:absolute; top:100px; left:55px; width:100px; height:48px; transform:rotate(35deg); border-radius:100px 0; background:#27a36a; }
-      .leaf::after { position:absolute; top:26px; width:110px; content:""; transform:rotate(-26deg); border-top:3px solid #d5fae3; }
-      .label { color:var(--coral); font-size:13px; font-weight:800; letter-spacing:.08em; }
-      h2 { margin:14px 0 36px; font-size:clamp(31px, 4vw, 47px); letter-spacing:-.055em; line-height:1.1; }
-      .cards { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
-      .card, .tire-card { border:1px solid var(--line); background:#fff; transition:transform .2s, box-shadow .2s; }
-      .card { min-height:205px; border-radius:17px; padding:24px; }
-      .card:hover, .tire-card:hover { transform:translateY(-4px); box-shadow:0 8px 22px #00000012; }
-      .icon { font-size:25px; }
-      .card h3 { margin:18px 0 8px; font-size:19px; }
-      .card p, .tire-card p { margin:0; color:var(--muted); font-size:14px; line-height:1.65; }
-      .tire-types { padding-top:30px; }
-      .tire-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
-      .tire-card { overflow:hidden; border-radius:18px; }
-      .tire-card img { width:100%; height:200px; object-fit:cover; }
-      .tire-card h3 { margin:18px 20px 8px; font-size:19px; }
-      .tire-card p { margin:0 20px 20px; }
-      #services { padding-bottom:30px; }
-      .cta { padding:78px 0; }
-      .cta-box { display:flex; align-items:center; justify-content:space-between; gap:30px; border-radius:24px; padding:50px; background:var(--mint); }
-      .cta h2 { margin:10px 0 0; max-width:600px; }
-      .wechat-box { display:flex; flex-direction:column; align-items:center; gap:10px; flex-shrink:0; color:var(--muted); font-size:14px; text-align:center; }
-      .wechat-qrcode { width:180px; height:auto; border-radius:8px; }
-      .qr-download { color:var(--ink); font-weight:700; }
-      footer { border-top:1px solid var(--line); padding:27px 0; color:var(--muted); font-size:14px; }
-      footer p { margin:0; }
-      @media (max-width:760px) {
-        .wrap { width:min(100% - 32px, 1120px); }
-        nav { height:67px; gap:12px; }
-        .brand { font-size:18px; }
-        .mark { width:27px; height:27px; }
-        .nav-links { display:none; }
-        .hero { padding:38px 0 15px; }
-        .hero-grid { grid-template-columns:1fr; gap:38px; }
-        h1 { font-size:35px; }
-        .hero-tagline { font-size:18px; }
-        .visual { order:-1; height:320px; }
-        .circle { width:170px; height:170px; }
-        .tire { right:50px; bottom:27px; width:200px; height:200px; border-width:34px; }
-        .tire::before { inset:31px; border-width:15px; }
-        .tire::after { inset:58px; font-size:11px; }
-        .leaf { top:70px; left:25px; transform:scale(.75) rotate(35deg); }
-        .road { height:125px; }
-        .cards { grid-template-columns:1fr; }
-        .tire-grid { grid-template-columns:repeat(2, 1fr); gap:12px; }
-        .tire-card img { height:150px; }
-        .tire-card h3 { margin:14px 14px 6px; font-size:17px; }
-        .tire-card p { margin:0 14px 16px; font-size:13px; }
-        .cta-box { display:block; padding:32px 25px; }
-        .wechat-box { align-items:flex-start; margin-top:25px; text-align:left; }
-        .wechat-qrcode { width:200px; }
-        section { padding:55px 0; scroll-margin-top:80px; }
+      :root {
+        --coral: #ff385c;
+        --ink: #222;
+        --muted: #717171;
+        --line: #ddd;
+        --mint: #e9f8f0;
       }
-      @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; } }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+          sans-serif;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a:focus-visible {
+        outline: 3px solid #222;
+        outline-offset: 3px;
+      }
+      .wrap {
+        width: min(1120px, calc(100% - 48px));
+        margin: auto;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid #ebebeb;
+        background: #fff;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        height: 80px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--coral);
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .mark {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+      }
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+      .nav-links a {
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .nav-button {
+        display: inline-block;
+        border: 0;
+        border-radius: 9px;
+        padding: 14px 20px;
+        background: var(--coral);
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .nav-button {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+      section {
+        padding: 72px 0;
+        scroll-margin-top: 96px;
+      }
+      .hero {
+        padding: 70px 0 35px;
+        background: linear-gradient(180deg, #fff 0%, #fff8f8 100%);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        border: 1px solid #eee;
+        border-radius: 99px;
+        padding: 8px 12px;
+        background: #fff;
+        box-shadow: 0 3px 12px #0000000c;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #42b883;
+      }
+      h1 {
+        margin: 19px 0 22px;
+        font-size: clamp(43px, 5.5vw, 70px);
+        letter-spacing: -0.065em;
+        line-height: 1.05;
+      }
+      .hero-tagline {
+        margin: 0;
+        color: var(--muted);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+      .hero-tagline em {
+        color: var(--coral);
+        font-style: normal;
+      }
+      .visual {
+        position: relative;
+        height: 440px;
+        overflow: hidden;
+        border-radius: 25px;
+        background: #ffdadf;
+      }
+      .circle {
+        position: absolute;
+        top: -64px;
+        right: -55px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: #ff7b90;
+      }
+      .road {
+        position: absolute;
+        bottom: -50px;
+        left: -8%;
+        width: 120%;
+        height: 185px;
+        border-radius: 50% 50% 0 0;
+        background: #222;
+      }
+      .tire {
+        position: absolute;
+        right: 91px;
+        bottom: 48px;
+        width: 260px;
+        height: 260px;
+        transform: rotate(-16deg);
+        border: 43px solid #29302d;
+        border-radius: 50%;
+        box-shadow:
+          inset 0 0 0 11px #0c100e,
+          0 18px 24px #0004;
+      }
+      .tire::before {
+        position: absolute;
+        inset: 41px;
+        content: "";
+        border: 20px dashed #6d7872;
+        border-radius: 50%;
+      }
+      .tire::after {
+        display: grid;
+        position: absolute;
+        inset: 75px;
+        place-items: center;
+        content: "REUSE";
+        border-radius: 50%;
+        background: #fff;
+        color: var(--coral);
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+      .leaf {
+        position: absolute;
+        top: 100px;
+        left: 55px;
+        width: 100px;
+        height: 48px;
+        transform: rotate(35deg);
+        border-radius: 100px 0;
+        background: #27a36a;
+      }
+      .leaf::after {
+        position: absolute;
+        top: 26px;
+        width: 110px;
+        content: "";
+        transform: rotate(-26deg);
+        border-top: 3px solid #d5fae3;
+      }
+      .label {
+        color: var(--coral);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+      h2 {
+        margin: 14px 0 36px;
+        font-size: clamp(31px, 4vw, 47px);
+        letter-spacing: -0.055em;
+        line-height: 1.1;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card,
+      .tire-card {
+        border: 1px solid var(--line);
+        background: #fff;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .card {
+        min-height: 205px;
+        border-radius: 17px;
+        padding: 24px;
+      }
+      .card:hover,
+      .tire-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px #00000012;
+      }
+      .icon {
+        font-size: 25px;
+      }
+      .card h3 {
+        margin: 18px 0 8px;
+        font-size: 19px;
+      }
+      .card p,
+      .tire-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+      .tire-types {
+        padding-top: 30px;
+      }
+      .tire-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .tire-card {
+        overflow: hidden;
+        border-radius: 18px;
+      }
+      .tire-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .tire-card h3 {
+        margin: 18px 20px 8px;
+        font-size: 19px;
+      }
+      .tire-card p {
+        margin: 0 20px 20px;
+      }
+      #services {
+        padding-bottom: 30px;
+      }
+      .cta {
+        padding: 78px 0;
+      }
+      .cta-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        border-radius: 24px;
+        padding: 50px;
+        background: var(--mint);
+      }
+      .cta h2 {
+        margin: 10px 0 0;
+        max-width: 600px;
+      }
+      .wechat-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+      .wechat-qrcode {
+        width: 180px;
+        height: auto;
+        border-radius: 8px;
+      }
+      .qr-download {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 27px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      footer p {
+        margin: 0;
+      }
+      @media (max-width: 760px) {
+        .wrap {
+          width: min(100% - 32px, 1120px);
+        }
+        nav {
+          height: 67px;
+          gap: 12px;
+        }
+        .brand {
+          font-size: 18px;
+        }
+        .mark {
+          width: 27px;
+          height: 27px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero {
+          padding: 38px 0 15px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
+        h1 {
+          font-size: 35px;
+        }
+        .hero-tagline {
+          font-size: 18px;
+        }
+        .visual {
+          order: -1;
+          height: 320px;
+        }
+        .circle {
+          width: 170px;
+          height: 170px;
+        }
+        .tire {
+          right: 50px;
+          bottom: 27px;
+          width: 200px;
+          height: 200px;
+          border-width: 34px;
+        }
+        .tire::before {
+          inset: 31px;
+          border-width: 15px;
+        }
+        .tire::after {
+          inset: 58px;
+          font-size: 11px;
+        }
+        .leaf {
+          top: 70px;
+          left: 25px;
+          transform: scale(0.75) rotate(35deg);
+        }
+        .road {
+          height: 125px;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+        .tire-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .tire-card img {
+          height: 150px;
+        }
+        .tire-card h3 {
+          margin: 14px 14px 6px;
+          font-size: 17px;
+        }
+        .tire-card p {
+          margin: 0 14px 16px;
+          font-size: 13px;
+        }
+        .cta-box {
+          display: block;
+          padding: 32px 25px;
+        }
+        .wechat-box {
+          align-items: flex-start;
+          margin-top: 25px;
+          text-align: left;
+        }
+        .wechat-qrcode {
+          width: 200px;
+        }
+        section {
+          padding: 55px 0;
+          scroll-margin-top: 80px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
       <div class="wrap">
         <nav aria-label="主导航">
-          <a class="brand" href="#top"><img class="mark" src="images/favicon.svg" width="31" height="31" alt="" />广州轮胎回收</a>
+          <a class="brand" href="#top"
+            ><img
+              class="mark"
+              src="images/tire_icon.svg"
+              width="31"
+              height="31"
+              alt=""
+            />广州轮胎回收</a
+          >
           <div class="nav-links">
             <a href="#services">服务内容</a>
             <a href="#type">轮胎类型</a>
@@ -139,12 +517,19 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="wrap hero-grid">
           <div>
-            <div class="pill"><i class="dot" aria-hidden="true"></i>本地 24 小时内响应</div>
+            <div class="pill">
+              <i class="dot" aria-hidden="true"></i>本地 24 小时内响应
+            </div>
             <h1 id="hero-title">广州轮胎上门回收<br />回收各种废旧轮胎</h1>
-            <p class="hero-tagline">让每一条轮胎<br /><em>去往更好的地方。</em></p>
+            <p class="hero-tagline">
+              让每一条轮胎<br /><em>去往更好的地方。</em>
+            </p>
           </div>
           <div class="visual" role="img" aria-label="轮胎循环利用插画">
-            <div class="circle"></div><div class="leaf"></div><div class="road"></div><div class="tire"></div>
+            <div class="circle"></div>
+            <div class="leaf"></div>
+            <div class="road"></div>
+            <div class="tire"></div>
           </div>
         </div>
       </section>
@@ -153,9 +538,21 @@
           <div class="label">OUR SERVICES</div>
           <h2 id="services-title">一件小事，也有完整的循环旅程。</h2>
           <div class="cards">
-            <article class="card"><div class="icon" aria-hidden="true">🚚</div><h3>上门回收</h3><p>覆盖社区、汽修门店与车队，按您预约的时间完成规范装运。</p></article>
-            <article class="card"><div class="icon" aria-hidden="true">♻️</div><h3>资源再生</h3><p>经过分拣、破碎与精细处理，转化为再生胶、橡胶颗粒等材料。</p></article>
-            <article class="card"><div class="icon" aria-hidden="true">✓</div><h3>合规可追溯</h3><p>提供回收记录与去向证明，让每一次环保行动都看得见。</p></article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">🚚</div>
+              <h3>上门回收</h3>
+              <p>覆盖社区、汽修门店与车队，按您预约的时间完成规范装运。</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">♻️</div>
+              <h3>资源再生</h3>
+              <p>经过分拣、破碎与精细处理，转化为再生胶、橡胶颗粒等材料。</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">✓</div>
+              <h3>合规可追溯</h3>
+              <p>提供回收记录与去向证明，让每一次环保行动都看得见。</p>
+            </article>
           </div>
         </div>
       </section>
@@ -164,26 +561,94 @@
           <div class="label">TIRE TYPES</div>
           <h2 id="type-title">覆盖多种废旧轮胎回收。</h2>
           <div class="tire-grid">
-            <article class="tire-card"><picture><source srcset="images/truck-tire.webp" type="image/webp" /><img src="images/truck-tire.png" width="1536" height="1024" loading="lazy" decoding="async" alt="货车轮胎" /></picture><h3>货车轮胎</h3><p>回收各种货车、卡车、大型运输车辆废旧轮胎。</p></article>
-            <article class="tire-card"><picture><source srcset="images/car-tire.webp" type="image/webp" /><img src="images/car-tire.png" width="497" height="355" loading="lazy" decoding="async" alt="轿车轮胎" /></picture><h3>轿车轮胎</h3><p>回收家用轿车、SUV以及新能源车辆轮胎。</p></article>
-            <article class="tire-card"><picture><source srcset="images/construction-tire.webp" type="image/webp" /><img src="images/construction-tire.png" width="497" height="355" loading="lazy" decoding="async" alt="工程车轮胎" /></picture><h3>工程车轮胎</h3><p>回收装载机、挖掘机等大型工程车辆轮胎。</p></article>
-            <article class="tire-card"><picture><source srcset="images/aircraft-tire.webp" type="image/webp" /><img src="images/aircraft-tire.png" width="497" height="355" loading="lazy" decoding="async" alt="飞机轮胎" /></picture><h3>飞机轮胎</h3><p>回收特殊规格航空轮胎及大型工业轮胎。</p></article>
+            <article class="tire-card">
+              <picture
+                ><source srcset="images/truck-tire.webp" type="image/webp" />
+                <img
+                  src="images/truck-tire.png"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  alt="货车轮胎"
+              /></picture>
+              <h3>货车轮胎</h3>
+              <p>回收各种货车、卡车、大型运输车辆废旧轮胎。</p>
+            </article>
+            <article class="tire-card">
+              <picture
+                ><source srcset="images/car-tire.webp" type="image/webp" />
+                <img
+                  src="images/car-tire.png"
+                  width="497"
+                  height="355"
+                  loading="lazy"
+                  decoding="async"
+                  alt="轿车轮胎"
+              /></picture>
+              <h3>轿车轮胎</h3>
+              <p>回收家用轿车、SUV以及新能源车辆轮胎。</p>
+            </article>
+            <article class="tire-card">
+              <picture
+                ><source
+                  srcset="images/construction-tire.webp"
+                  type="image/webp" />
+                <img
+                  src="images/construction-tire.png"
+                  width="497"
+                  height="355"
+                  loading="lazy"
+                  decoding="async"
+                  alt="工程车轮胎"
+              /></picture>
+              <h3>工程车轮胎</h3>
+              <p>回收装载机、挖掘机等大型工程车辆轮胎。</p>
+            </article>
+            <article class="tire-card">
+              <picture
+                ><source srcset="images/aircraft-tire.webp" type="image/webp" />
+                <img
+                  src="images/aircraft-tire.png"
+                  width="497"
+                  height="355"
+                  loading="lazy"
+                  decoding="async"
+                  alt="飞机轮胎"
+              /></picture>
+              <h3>飞机轮胎</h3>
+              <p>回收特殊规格航空轮胎及大型工业轮胎。</p>
+            </article>
           </div>
         </div>
       </section>
       <section class="cta" id="contact" aria-labelledby="contact-title">
         <div class="wrap">
           <div class="cta-box">
-            <div><div class="label">START TODAY</div><h2 id="contact-title">从一条轮胎开始，让改变发生。</h2></div>
+            <div>
+              <div class="label">START TODAY</div>
+              <h2 id="contact-title">从一条轮胎开始，让改变发生。</h2>
+            </div>
             <div class="wechat-box">
-              <img class="wechat-qrcode" src="images/wechat.JPG" width="888" height="1131" decoding="async" alt="添加 Gordon 微信预约回收的二维码" />
+              <img
+                class="wechat-qrcode"
+                src="images/wechat.JPG"
+                width="888"
+                height="1131"
+                decoding="async"
+                alt="添加 Gordon 微信预约回收的二维码"
+              />
               <span>微信扫码预约回收</span>
-              <a class="qr-download" href="images/wechat.JPG" download>保存二维码后在微信中识别</a>
+              <a class="qr-download" href="images/wechat.JPG" download
+                >保存二维码后在微信中识别</a
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer><div class="wrap"><p>© 2026 广州轮胎回收</p></div></footer>
+    <footer>
+      <div class="wrap"><p>© 2026 广州轮胎回收</p></div>
+    </footer>
   </body>
 </html>
