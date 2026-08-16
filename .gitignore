@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# 环境变量
+.env
+.env.*
+
+# 日志
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+
+# 压缩包
+*.zip
+
+# 依赖目录（以后使用）
+node_modules/
+
+# 构建产物（以后使用）
+dist/
+build/
