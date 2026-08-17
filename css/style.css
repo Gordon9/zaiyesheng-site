@@ -299,9 +299,16 @@ h2 {
   padding: 50px;
   background: var(--mint);
 }
-.cta h2 {
+/* .cta h2 {
   margin: 10px 0 0;
   max-width: 600px;
+} */
+.cta-box > div:first-child {
+  flex: 1;
+}
+
+.cta h2 {
+  margin: 10px 0 0;
 }
 .wechat-box {
   display: flex;
