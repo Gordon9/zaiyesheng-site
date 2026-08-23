@@ -1,5 +1,5 @@
-// 活动倒计时（七夕限时活动，活动截止时间：2026-08-19）
-const eventDate = new Date("2026-08-19 00:00:00").getTime();
+// 活动倒计时（中秋限时活动，活动截止时间：2026-09-25）
+const eventDate = new Date("2026-09-25 00:00:00").getTime();
 
 function updateEventCountdown() {
   const distance = eventDate - new Date().getTime();
